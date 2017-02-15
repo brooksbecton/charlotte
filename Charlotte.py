@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
+from stemming.porter2 import stem
 
 
 class Charlotte:
@@ -29,6 +30,11 @@ class Charlotte:
 
         return filtered_words
 
-    def get_stem_words(self):
-        print("get_stem_words")
+    def filter_stem_words(self, words):
+        stemmed_words = []
+        for w in words:
+            stemmed_words.append(stem(w))
+        return stemmed_words
+
+
 
