@@ -1,3 +1,5 @@
+import glob
+
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from stemming.porter2 import stem
@@ -11,6 +13,9 @@ class Charlotte:
 
     def __init__(self):
         self.stop_words = set(stopwords.words('english'))
+
+    def get_all_filenames_from_dir(self, target_dir, ext):
+        return glob.glob(target_dir + "*" + ext)
 
     def process_html_file(self, filename):
         html = self.read_file(filename)
