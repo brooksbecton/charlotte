@@ -26,17 +26,14 @@ class Charlotte:
 
             stemmed_word = self.stem_word(word)
 
-
-            try:
-                file_word_data["words"][word]
-            except KeyError:
+            #Initing a new words structures
+            if word not in file_word_data["words"].keys():
                 file_word_data["words"][word] = {"stemmed": stemmed_word}
 
-            try:
-                file_word_data["stemmed_words"][stemmed_word]
-            except KeyError:
+            if stemmed_word not in file_word_data["stemmed_words"].keys():
                 file_word_data["stemmed_words"][stemmed_word] = {}
 
+            #Checking to see if a stemmed word already exists
             if file_word_data["stemmed_words"][stemmed_word]:
                 file_word_data["stemmed_words"][stemmed_word]["occurrences"] += 1
             else:
