@@ -9,20 +9,20 @@ class charlotte_test(unittest.TestCase):
 
     #HTML Removal Tests
     def tearDown(self):
-        self.test_charlotte.target_words = []
+        self.test_charlotte.word_data = {}
 
     def test_remove_html_single_element(self):
         test_string = "<h1>Hello, World</h1>"
-        excpected_result = ["Hello,", "World"]
+        excpected_result = ["hello,", "world"]
         self.assertEqual(self.test_charlotte.remove_html_tags(test_string), excpected_result)
 
     def test_remove_html_single_element_with_attr(self):
         test_string = "<a href='//www.reddit.com/r/ProgrammerHumor/'>Hello, World</a>"
-        excpected_result = ["Hello,", "World"]
+        excpected_result = ["hello,", "world"]
         self.assertEqual(self.test_charlotte.remove_html_tags(test_string), excpected_result)
     def test_remove_html_two_element(self):
         test_string = "<a href='www.reddit.com/r/ProgrammerHumor/'>Hello, World</a><p>so funny</p>"
-        excpected_result = ["Hello,", "World", "so", "funny"]
+        excpected_result = ["hello,", "world", "so", "funny"]
         self.assertEqual(self.test_charlotte.remove_html_tags(test_string), excpected_result)
 
     def test_remove_html_empty_element(self):
@@ -60,5 +60,50 @@ class charlotte_test(unittest.TestCase):
         test_word = ["computer", "functionality"]
         expected_result = ["comput", "function"]
         self.assertEqual(self.test_charlotte.filter_stem_words(test_word), expected_result)
+
+    def test_process_html_file_basic(self):
+        test_file = "assets/tests/test_process_html_file_basic.html"
+        expected_result = {
+            "words":{
+                "sun":{
+                    "stemmed": "sun"
+                },
+                "shines":{
+                    "stemmed": "shine"
+                },
+                "bright":{
+                    "stemmed": "bright"
+                },
+                "today":{
+                    "stemmed": "today"
+                }
+            }
+        }
+        self.assertEqual(self.test_charlotte.process_html_file(test_file), expected_result)
+
+    def test_process_html_files_basic(self):
+        test_files = ["assets/tests/test_process_html_file_basic.html"]
+        expected_result = {
+            test_files[0]:{
+                "words":{
+                    "sun":{
+                        "stemmed": "sun"
+                    },
+                    "shines":{
+                        "stemmed": "shine"
+                    },
+                    "bright":{
+                        "stemmed": "bright"
+                    },
+                    "today":{
+                        "stemmed": "today"
+                    }
+                }
+            }
+        }
+
+        self.test_charlotte.process_html_files(test_files)
+
+        self.assertEqual(self.test_charlotte.word_data, expected_result)
 
 unittest.main()
