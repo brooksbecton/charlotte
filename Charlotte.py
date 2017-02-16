@@ -5,6 +5,7 @@ from stemming.porter2 import stem
 
 class Charlotte:
 
+    #Contains words and there meta data indexed by files there are found in
     word_data = {}
     stop_words = []
 
@@ -17,12 +18,30 @@ class Charlotte:
         file_word_data = {}
 
         #Creating place to store word data indexed by filename
-        file_word_data = {"words": {}}
+        file_word_data = {"words": {}, "stemmed_words": {}}
 
         html_words = self.remove_stop_words(self.remove_html_tags(html))
 
         for word in html_words:
-            file_word_data['words'][word] = {"stemmed": self.stem_word(word)}
+
+            stemmed_word = self.stem_word(word)
+
+
+            try:
+                file_word_data["words"][word]
+            except KeyError:
+                file_word_data["words"][word] = {"stemmed": stemmed_word}
+
+            try:
+                file_word_data["stemmed_words"][stemmed_word]
+            except KeyError:
+                file_word_data["stemmed_words"][stemmed_word] = {}
+
+            if file_word_data["stemmed_words"][stemmed_word]:
+                file_word_data["stemmed_words"][stemmed_word]["occurrences"] += 1
+            else:
+                file_word_data["stemmed_words"][stemmed_word]["occurrences"] = 1
+
 
         return file_word_data
 
@@ -59,7 +78,7 @@ class Charlotte:
     def stem_word(self, word):
         return stem(word)
 
-    def filter_stem_words(self, words):
+    def stem_words(self, words):
         stemmed_words = []
         for word in words:
             stemmed_words.append(self.stem_word(word))

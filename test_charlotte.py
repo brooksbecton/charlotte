@@ -6,7 +6,7 @@ from Charlotte import Charlotte
 class charlotte_test(unittest.TestCase):
 
     test_charlotte = Charlotte()
-
+    maxDiff = None
     #HTML Removal Tests
     def tearDown(self):
         self.test_charlotte.word_data = {}
@@ -54,28 +54,42 @@ class charlotte_test(unittest.TestCase):
     def test_stem_word(self):
         test_word = ["computer"]
         expected_result = ["comput"]
-        self.assertEqual(self.test_charlotte.filter_stem_words(test_word), expected_result)
+        self.assertEqual(self.test_charlotte.stem_words(test_word), expected_result)
 
     def test_stem_word_two(self):
         test_word = ["computer", "functionality"]
         expected_result = ["comput", "function"]
-        self.assertEqual(self.test_charlotte.filter_stem_words(test_word), expected_result)
+        self.assertEqual(self.test_charlotte.stem_words(test_word), expected_result)
 
     def test_process_html_file_basic(self):
         test_file = "assets/tests/test_process_html_file_basic.html"
         expected_result = {
-            "words":{
-                "sun":{
-                    "stemmed": "sun"
+            'words':{
+                'sun':{
+                    'stemmed': 'sun'
                 },
-                "shines":{
-                    "stemmed": "shine"
+                'shines':{
+                    'stemmed': 'shine'
                 },
-                "bright":{
-                    "stemmed": "bright"
+                'bright':{
+                    'stemmed': 'bright'
                 },
-                "today":{
-                    "stemmed": "today"
+                'today':{
+                    'stemmed': 'today'
+                }
+            },
+            'stemmed_words': {
+                'sun':{
+                    'occurrences': 1
+                },
+                'shine':{
+                    'occurrences': 1
+                },
+                'bright':{
+                    'occurrences': 1
+                },
+                'today':{
+                    'occurrences': 1
                 }
             }
         }
@@ -84,19 +98,68 @@ class charlotte_test(unittest.TestCase):
     def test_process_html_files_basic(self):
         test_files = ["assets/tests/test_process_html_file_basic.html"]
         expected_result = {
-            test_files[0]:{
-                "words":{
-                    "sun":{
-                        "stemmed": "sun"
+            'assets/tests/test_process_html_file_basic.html': {
+                'words':{
+                    'sun':{
+                        'stemmed': 'sun'
                     },
-                    "shines":{
-                        "stemmed": "shine"
+                    'shines':{
+                        'stemmed': 'shine'
                     },
-                    "bright":{
-                        "stemmed": "bright"
+                    'bright':{
+                        'stemmed': 'bright'
                     },
-                    "today":{
-                        "stemmed": "today"
+                    'today':{
+                        'stemmed': 'today'
+                    }
+                },
+                'stemmed_words': {
+                    'sun':{
+                        'occurrences': 1
+                    },
+                    'shine':{
+                        'occurrences': 1
+                    },
+                    'bright':{
+                        'occurrences': 1
+                    },
+                    'today':{
+                        'occurrences': 1
+                    }
+                }
+            }
+        }
+
+    def test_process_html_files_basic_multi_word(self):
+        test_files = ["assets/tests/test_process_html_file_basic_multi_word.html"]
+        expected_result = {
+            'assets/tests/test_process_html_file_basic_multi_word.html': {
+                'words':{
+                    'sun':{
+                        'stemmed': 'sun'
+                    },
+                    'shines':{
+                        'stemmed': 'shine'
+                    },
+                    'bright':{
+                        'stemmed': 'bright'
+                    },
+                    'today':{
+                        'stemmed': 'today'
+                    }
+                },
+                'stemmed_words': {
+                    'sun':{
+                        'occurrences': 2
+                    },
+                    'shine':{
+                        'occurrences': 2
+                    },
+                    'bright':{
+                        'occurrences': 2
+                    },
+                    'today':{
+                        'occurrences': 2
                     }
                 }
             }
