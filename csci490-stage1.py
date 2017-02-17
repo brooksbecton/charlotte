@@ -25,7 +25,9 @@ for directory in DIRECTORIES:
     with open(filename, 'w') as f:
         f.write(JSON_DATA)
 
-    msC.word_data = {}
+    msC.word_data = {
+        "summary": {}
+    }
 
     i += 1
         
