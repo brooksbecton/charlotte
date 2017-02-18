@@ -9,7 +9,7 @@ class charlotte_test(unittest.TestCase):
     maxDiff = None
     #HTML Removal Tests
     def tearDown(self):
-        self.test_charlotte.word_data = {}
+        self.test_charlotte.word_data = {"summary": {}}
 
     def test_remove_html_single_element(self):
         test_string = "<h1>Hello, World</h1>"

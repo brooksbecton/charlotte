@@ -1,5 +1,5 @@
 import glob
-
+import operator
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from stemming.porter2 import stem
@@ -15,7 +15,12 @@ class Charlotte:
     
 
     def __init__(self):
-        self.stop_words = set(stopwords.words('english'))
+        self.stop_words = self.gen_stop_words() 
+
+    def gen_stop_words(self):
+        stop_words = set(stopwords.words('english'))
+        stop_words.add("")
+        return stop_words
 
     def get_all_filenames_from_dir(self, target_dir, ext):
         return glob.glob(target_dir + "*" + ext)
@@ -41,17 +46,16 @@ class Charlotte:
 
             if stemmed_word not in file_word_data["stemmed_words"].keys():
                 file_word_data["stemmed_words"][stemmed_word] = {}
-                self.word_data["summary"][stemmed_word] = {}
+                self.word_data["summary"][stemmed_word] = 0
 
 
             #Checking to see if a stemmed word already exists
             if file_word_data["stemmed_words"][stemmed_word]:
                 file_word_data["stemmed_words"][stemmed_word]["occurrences"] += 1
-                self.word_data["summary"][stemmed_word]["occurrences"] += 1
+                self.word_data["summary"][stemmed_word] += 1
             else:
                 file_word_data["stemmed_words"][stemmed_word]["occurrences"] = 1
-                self.word_data["summary"][stemmed_word]["occurrences"] = 1
-
+                self.word_data["summary"][stemmed_word] = 1
 
         return file_word_data
 
@@ -80,6 +84,7 @@ class Charlotte:
         filtered_words = []
 
         for word in unfiltered_words:
+            word  = ''.join(e for e in word if e.isalpha())
             if word not in self.stop_words:
                 filtered_words.append(word)
 
