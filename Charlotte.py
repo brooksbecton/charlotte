@@ -1,5 +1,4 @@
 import glob
-import operator
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from stemming.porter2 import stem

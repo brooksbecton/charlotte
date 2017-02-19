@@ -4,48 +4,48 @@ import json
 import operator
 import os
 
-msC = Charlotte()
+def process_html():
+    msC = Charlotte()
 
-DIRECTORIES = ['assets/projectdata/test/course/', 'assets/projectdata/test/faculty/', 'assets/projectdata/test/student/']
-# DIRECTORIES = ['assets/projectdata/test/student/']
+    DIRECTORIES = ['assets/projectdata/train/student/',
+                   'assets/projectdata/train/course/',
+                   'assets/projectdata/train/faculty/',
+                   'assets/projectdata/test/student/',
+                   'assets/projectdata/test/course/',
+                   'assets/projectdata/test/faculty/']
 
-i = 0
+    for directory in DIRECTORIES:
+        FILENAMES = msC.get_all_filenames_from_dir(directory, '')
 
-for directory in DIRECTORIES:
-    FILENAMES = msC.get_all_filenames_from_dir(directory, '.html')
+        msC.process_html_files(FILENAMES)
 
-    msC.process_html_files(FILENAMES)
+        #Sorting stemmed words by weight into a list
+        msC.word_data["summary"] = sorted(msC.word_data["summary"].items(),
+                                          key=operator.itemgetter(1))
 
-    msC.word_data["summary"] = sorted(msC.word_data["summary"].items(), key=operator.itemgetter(1))
-    
-    DATA = msC.word_data["summary"][:200]
+        save_data(msC.word_data["summary"][:200], directory, "bottom")
+        msC.word_data["summary"].reverse()
+        save_data(msC.word_data["summary"][:200], directory, "top")
 
-    JSON_DATA = json.dumps(DATA, indent=4, sort_keys=True)
-    if not os.path.exists('results'):
-        os.makedirs('results')
+        msC.word_data = {
+            "summary": {}
+        }
+
+def save_data(stemmed_words, directory, topBottom):
+    data = []
+
+    for word in stemmed_words:
+        data.append(word[0])
+
+    json_stemmed_words = json.dumps(data, indent=4, sort_keys=True)
 
     filename = directory.split('/')[3]
-    filename = 'results/' + filename + '-top-200.json'
-    
-    with open(filename, 'w') as f:
-        f.write(JSON_DATA)
+    directory_name = directory.split('/')[2]
+    filename = 'results/'+ directory_name + '/' + filename + '-' + topBottom + '-200.json'
 
-    msC.word_data["summary"].reverse()
-
-    DATA = msC.word_data["summary"][:200]
-
-    JSON_DATA = json.dumps(DATA, indent=4, sort_keys=True)
-
-    filename = directory.split('/')[3]
-    filename = 'results/' + filename + '-bottom-200.json'
-
-    with open(filename, 'w') as f:
-        f.write(JSON_DATA)
-
-    msC.word_data = {
-        "summary": {}
-    }
+    with open(filename, 'w+') as file:
+        file.write(json_stemmed_words)
 
 
-    i += 1
-        
+
+process_html()
