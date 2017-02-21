@@ -11,18 +11,36 @@ class Charlotte:
         "summary": {}
     }
     stop_words = []
-    
+
 
     def __init__(self):
         self.stop_words = self.gen_stop_words() 
 
+    def concat_files(self, filenames, output_file):
+        with open(output_file, 'w') as outfile:
+            for fname in filenames:
+                with open(fname) as infile:
+                    for line in infile:
+                        outfile.write(line)
+
+
     def gen_stop_words(self):
         stop_words = set(stopwords.words('english'))
         stop_words.add("")
+        stop_words.add("mimeversion")
+        stop_words.add("contentlength")
+        stop_words.add("contenttype")
+        stop_words.add("gmt")
+        stop_words.add("lastmodified")
+        stop_words.add("texthtml")
+        stop_words.add("cern")
         return stop_words
 
-    def get_all_filenames_from_dir(self, target_dir, ext):
-        return glob.glob(target_dir + "*" + ext)
+    def get_all_filenames_from_dir(self):
+        filenames = []
+        for filename in glob.iglob('assets/projectdata/test/**/http*', recursive=True):
+            filenames.append(filename)
+        return filenames
 
 
     def process_html_file(self, filename):
