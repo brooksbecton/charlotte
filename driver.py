@@ -1,66 +1,8 @@
-import json
-import math
-import operator
-import os
+from CharlotteKnn import CharlotteKnn
 
-from Charlotte import Charlotte
-
-# Expecting Dicts Like: 
-#     "filename"{
-#         "words"{
-#             "comput": 200
-#             ...
-#         },
-#         "category": "student
-#     }
-
-
-msC = Charlotte()
-
-def euclideanDistance(instance1, instance2, length):
-    # distance = 0
-    # for word in instance1:
-    #     if word in instance2:
-    #         distance += pow((instance1[word]['occurrences'] - instance2[word]['occurrences']), 2)
-    # return math.sqrt(distance)
-
-def createTrainingData():
-    if os.path.exists('results/test.json') is not True:
-        file_data = {}
-        target_dir = './assets/projectdata/test/'
-        for root, dirs, files in os.walk(target_dir, topdown=False):
-            for d in dirs:
-                for f in os.listdir(root + d):
-                    file_data[f] = msC.process_html_file(root + d + '/' + f)
-                    file_data[f]['category'] = d
-            with open('results/test.json', 'w+') as outfile:
-                outfile.write(json.dumps(file_data, indent=4) )
-        return file_data
-    else: 
-        with open('results/test.json', 'r') as file_data:
-            return json.loads(file_data.read())
-
-
-
-# trainingSet: contains all stop words and categories from the training files
-# testInstance: one file object that has stop words but not category
-# k: the number of neighbors needed to categorize the testInstance
-def getNeighbors(trainingSet, testInstance, k):
-    distances = []
-    length = len(testInstance.keys())-1
-    for webpage in trainingSet.keys():
-        dist = euclideanDistance(testInstance, trainingSet[webpage], length)
-        distances.append((trainingSet[webpage], dist))
-        print(webpage + ": " + str(dist))
-    distances.sort(key=operator.itemgetter(1))
-    neighbors = []
-    for x in range(k):
-        neighbors = distances.pop()
-    return neighbors    
-            
 def main():
-    
-    training_data = createTrainingData()
+    msC = CharlotteKnn()
+    training_data = msC.createTrainingData()
 
     test_data = {"http_^^www.cs.cornell.edu^Info^People^lucy^lucy.html": {
         "words": {
@@ -804,7 +746,8 @@ def main():
     predictions=[]
     k = 3
     for key in test_data:
-        neighbors = getNeighbors(training_data, test_data[key]['stemmed_words'], k)
+        neighbors = msC.getNeighbors(training_data, test_data[key]['stemmed_words'], k)
+        print(str(neighbors))
 
 
 main()
