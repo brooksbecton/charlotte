@@ -62,7 +62,6 @@ class CharlotteKnn(Charlotte):
         for x in range(k):
             if(len(distances)):
                 neighbors.append(distances.pop())
-        print(neighbors)
         return neighbors    
                 
     # Takes in the nearest neighbors objects and checks their classification, 
@@ -75,10 +74,12 @@ class CharlotteKnn(Charlotte):
                 votes[classification] += 1
             else:
                 votes[classification] = 1
-        d = votes
-        s = [(k, d[k]) for k in sorted(d, key=d.get, reverse=True)]
-        for k, v in s: 
-            print(str(k) + ", " + str(v))
+    
+        # Sorting by votes
+        s = [(k, votes[k]) for k in sorted(votes, key=votes.get, reverse=True)]
+        
+        # Returns the classification with the most votes 
+        return s[0][0]
 
 
         

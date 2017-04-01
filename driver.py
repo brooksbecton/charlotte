@@ -1340,6 +1340,790 @@ def main():
             },
             "category": "course"
         },
+        "http_^^www.cs.utexas.edu^users^almstrum^welcome.html": {
+            "words": {
+                "server": {
+                    "stemmed": "server"
+                },
+                "date": {
+                    "stemmed": "date"
+                },
+                "monday": {
+                    "stemmed": "monday"
+                },
+                "jan": {
+                    "stemmed": "jan"
+                },
+                "sep": {
+                    "stemmed": "sep"
+                },
+                "vicki": {
+                    "stemmed": "vicki"
+                },
+                "l": {
+                    "stemmed": "l"
+                },
+                "almstrum": {
+                    "stemmed": "almstrum"
+                },
+                "utcs": {
+                    "stemmed": "utc"
+                },
+                "home": {
+                    "stemmed": "home"
+                },
+                "page": {
+                    "stemmed": "page"
+                },
+                "educator": {
+                    "stemmed": "educ"
+                },
+                "computer": {
+                    "stemmed": "comput"
+                },
+                "scientist": {
+                    "stemmed": "scientist"
+                },
+                "interested": {
+                    "stemmed": "interest"
+                },
+                "understanding": {
+                    "stemmed": "understand"
+                },
+                "people": {
+                    "stemmed": "peopl"
+                },
+                "learn": {
+                    "stemmed": "learn"
+                },
+                "particularly": {
+                    "stemmed": "particular"
+                },
+                "learning": {
+                    "stemmed": "learn"
+                },
+                "mathematical": {
+                    "stemmed": "mathemat"
+                },
+                "logic": {
+                    "stemmed": "logic"
+                },
+                "formal": {
+                    "stemmed": "formal"
+                },
+                "methods": {
+                    "stemmed": "method"
+                },
+                "doctoral": {
+                    "stemmed": "doctor"
+                },
+                "research": {
+                    "stemmed": "research"
+                },
+                "topic": {
+                    "stemmed": "topic"
+                },
+                "limitations": {
+                    "stemmed": "limit"
+                },
+                "novice": {
+                    "stemmed": "novic"
+                },
+                "science": {
+                    "stemmed": "scienc"
+                },
+                "students": {
+                    "stemmed": "student"
+                },
+                "lecturer": {
+                    "stemmed": "lectur"
+                },
+                "university": {
+                    "stemmed": "univers"
+                },
+                "texas": {
+                    "stemmed": "texa"
+                },
+                "austin": {
+                    "stemmed": "austin"
+                },
+                "addition": {
+                    "stemmed": "addit"
+                },
+                "spent": {
+                    "stemmed": "spent"
+                },
+                "fall": {
+                    "stemmed": "fall"
+                },
+                "semester": {
+                    "stemmed": "semest"
+                },
+                "teaching": {
+                    "stemmed": "teach"
+                },
+                "uppsala": {
+                    "stemmed": "uppsala"
+                },
+                "sweden": {
+                    "stemmed": "sweden"
+                },
+                "link": {
+                    "stemmed": "link"
+                },
+                "interests": {
+                    "stemmed": "interest"
+                },
+                "include": {
+                    "stemmed": "includ"
+                },
+                "encouraging": {
+                    "stemmed": "encourag"
+                },
+                "others": {
+                    "stemmed": "other"
+                },
+                "excel": {
+                    "stemmed": "excel"
+                },
+                "mathematics": {
+                    "stemmed": "mathemat"
+                },
+                "gardening": {
+                    "stemmed": "garden"
+                },
+                "travel": {
+                    "stemmed": "travel"
+                },
+                "crafts": {
+                    "stemmed": "craft"
+                },
+                "sewing": {
+                    "stemmed": "sew"
+                },
+                "woodworking": {
+                    "stemmed": "woodwork"
+                },
+                "etc": {
+                    "stemmed": "etc"
+                },
+                "heres": {
+                    "stemmed": "here"
+                },
+                "picture": {
+                    "stemmed": "pictur"
+                },
+                "hubby": {
+                    "stemmed": "hubbi"
+                },
+                "torgny": {
+                    "stemmed": "torgni"
+                },
+                "stadler": {
+                    "stemmed": "stadler"
+                },
+                "check": {
+                    "stemmed": "check"
+                },
+                "sites": {
+                    "stemmed": "site"
+                },
+                "iticse": {
+                    "stemmed": "itics"
+                },
+                "conference": {
+                    "stemmed": "confer"
+                },
+                "integrating": {
+                    "stemmed": "integr"
+                },
+                "technology": {
+                    "stemmed": "technolog"
+                },
+                "education": {
+                    "stemmed": "educ"
+                },
+                "june": {
+                    "stemmed": "june"
+                },
+                "working": {
+                    "stemmed": "work"
+                },
+                "groups": {
+                    "stemmed": "group"
+                },
+                "pages": {
+                    "stemmed": "page"
+                },
+                "maintain": {
+                    "stemmed": "maintain"
+                },
+                "classes": {
+                    "stemmed": "class"
+                },
+                "teach": {
+                    "stemmed": "teach"
+                },
+                "ut": {
+                    "stemmed": "ut"
+                },
+                "field": {
+                    "stemmed": "field"
+                },
+                "includes": {
+                    "stemmed": "includ"
+                },
+                "evaluation": {
+                    "stemmed": "evalu"
+                },
+                "mentoring": {
+                    "stemmed": "mentor"
+                },
+                "issues": {
+                    "stemmed": "issu"
+                },
+                "interesting": {
+                    "stemmed": "interest"
+                },
+                "jumpingoff": {
+                    "stemmed": "jumpingoff"
+                },
+                "points": {
+                    "stemmed": "point"
+                },
+                "area": {
+                    "stemmed": "area"
+                },
+                "suffers": {
+                    "stemmed": "suffer"
+                },
+                "spurts": {
+                    "stemmed": "spurt"
+                },
+                "construction": {
+                    "stemmed": "construct"
+                },
+                "frenzy": {
+                    "stemmed": "frenzi"
+                },
+                "organizations": {
+                    "stemmed": "organ"
+                },
+                "belong": {
+                    "stemmed": "belong"
+                },
+                "sigcse": {
+                    "stemmed": "sigcs"
+                },
+                "acms": {
+                    "stemmed": "acm"
+                },
+                "special": {
+                    "stemmed": "special"
+                },
+                "interest": {
+                    "stemmed": "interest"
+                },
+                "group": {
+                    "stemmed": "group"
+                },
+                "sigsoft": {
+                    "stemmed": "sigsoft"
+                },
+                "software": {
+                    "stemmed": "softwar"
+                },
+                "engineering": {
+                    "stemmed": "engin"
+                },
+                "acm": {
+                    "stemmed": "acm"
+                },
+                "association": {
+                    "stemmed": "associ"
+                },
+                "computing": {
+                    "stemmed": "comput"
+                },
+                "machinery": {
+                    "stemmed": "machineri"
+                },
+                "ieee": {
+                    "stemmed": "ieee"
+                },
+                "institute": {
+                    "stemmed": "institut"
+                },
+                "electrical": {
+                    "stemmed": "electr"
+                },
+                "electronics": {
+                    "stemmed": "electron"
+                },
+                "engineers": {
+                    "stemmed": "engin"
+                },
+                "cpsr": {
+                    "stemmed": "cpsr"
+                },
+                "professionals": {
+                    "stemmed": "profession"
+                },
+                "social": {
+                    "stemmed": "social"
+                },
+                "responsibility": {
+                    "stemmed": "respons"
+                },
+                "connections": {
+                    "stemmed": "connect"
+                },
+                "sciences": {
+                    "stemmed": "scienc"
+                },
+                "web": {
+                    "stemmed": "web"
+                },
+                "elsewhere": {
+                    "stemmed": "elsewher"
+                },
+                "contact": {
+                    "stemmed": "contact"
+                },
+                "office": {
+                    "stemmed": "offic"
+                },
+                "department": {
+                    "stemmed": "depart"
+                },
+                "c": {
+                    "stemmed": "c"
+                },
+                "tay": {
+                    "stemmed": "tay"
+                },
+                "tx": {
+                    "stemmed": "tx"
+                },
+                "usa": {
+                    "stemmed": "usa"
+                },
+                "cs": {
+                    "stemmed": "cs"
+                },
+                "main": {
+                    "stemmed": "main"
+                },
+                "direct": {
+                    "stemmed": "direct"
+                },
+                "seldom": {
+                    "stemmed": "seldom"
+                },
+                "fax": {
+                    "stemmed": "fax"
+                },
+                "always": {
+                    "stemmed": "alway"
+                },
+                "connected": {
+                    "stemmed": "connect"
+                },
+                "need": {
+                    "stemmed": "need"
+                },
+                "forewarn": {
+                    "stemmed": "forewarn"
+                },
+                "leave": {
+                    "stemmed": "leav"
+                },
+                "plenty": {
+                    "stemmed": "plenti"
+                },
+                "time": {
+                    "stemmed": "time"
+                },
+                "email": {
+                    "stemmed": "email"
+                },
+                "address": {
+                    "stemmed": "address"
+                },
+                "almstrumcsutexasedu": {
+                    "stemmed": "almstrumcsutexasedu"
+                }
+            },
+            "stemmed_words": {
+                "server": {
+                    "occurrences": 1
+                },
+                "date": {
+                    "occurrences": 1
+                },
+                "monday": {
+                    "occurrences": 2
+                },
+                "jan": {
+                    "occurrences": 1
+                },
+                "sep": {
+                    "occurrences": 1
+                },
+                "vicki": {
+                    "occurrences": 2
+                },
+                "l": {
+                    "occurrences": 2
+                },
+                "almstrum": {
+                    "occurrences": 2
+                },
+                "utc": {
+                    "occurrences": 1
+                },
+                "home": {
+                    "occurrences": 5
+                },
+                "page": {
+                    "occurrences": 5
+                },
+                "educ": {
+                    "occurrences": 4
+                },
+                "comput": {
+                    "occurrences": 10
+                },
+                "scientist": {
+                    "occurrences": 1
+                },
+                "interest": {
+                    "occurrences": 6
+                },
+                "understand": {
+                    "occurrences": 2
+                },
+                "peopl": {
+                    "occurrences": 1
+                },
+                "learn": {
+                    "occurrences": 3
+                },
+                "particular": {
+                    "occurrences": 1
+                },
+                "mathemat": {
+                    "occurrences": 3
+                },
+                "logic": {
+                    "occurrences": 2
+                },
+                "formal": {
+                    "occurrences": 1
+                },
+                "method": {
+                    "occurrences": 2
+                },
+                "doctor": {
+                    "occurrences": 1
+                },
+                "research": {
+                    "occurrences": 2
+                },
+                "topic": {
+                    "occurrences": 1
+                },
+                "limit": {
+                    "occurrences": 1
+                },
+                "novic": {
+                    "occurrences": 1
+                },
+                "scienc": {
+                    "occurrences": 7
+                },
+                "student": {
+                    "occurrences": 1
+                },
+                "lectur": {
+                    "occurrences": 1
+                },
+                "univers": {
+                    "occurrences": 3
+                },
+                "texa": {
+                    "occurrences": 3
+                },
+                "austin": {
+                    "occurrences": 6
+                },
+                "addit": {
+                    "occurrences": 1
+                },
+                "spent": {
+                    "occurrences": 1
+                },
+                "fall": {
+                    "occurrences": 1
+                },
+                "semest": {
+                    "occurrences": 1
+                },
+                "teach": {
+                    "occurrences": 2
+                },
+                "uppsala": {
+                    "occurrences": 2
+                },
+                "sweden": {
+                    "occurrences": 2
+                },
+                "link": {
+                    "occurrences": 1
+                },
+                "includ": {
+                    "occurrences": 2
+                },
+                "encourag": {
+                    "occurrences": 1
+                },
+                "other": {
+                    "occurrences": 1
+                },
+                "excel": {
+                    "occurrences": 1
+                },
+                "garden": {
+                    "occurrences": 1
+                },
+                "travel": {
+                    "occurrences": 1
+                },
+                "craft": {
+                    "occurrences": 1
+                },
+                "sew": {
+                    "occurrences": 1
+                },
+                "woodwork": {
+                    "occurrences": 1
+                },
+                "etc": {
+                    "occurrences": 1
+                },
+                "here": {
+                    "occurrences": 1
+                },
+                "pictur": {
+                    "occurrences": 1
+                },
+                "hubbi": {
+                    "occurrences": 1
+                },
+                "torgni": {
+                    "occurrences": 1
+                },
+                "stadler": {
+                    "occurrences": 1
+                },
+                "check": {
+                    "occurrences": 1
+                },
+                "site": {
+                    "occurrences": 1
+                },
+                "itics": {
+                    "occurrences": 1
+                },
+                "confer": {
+                    "occurrences": 1
+                },
+                "integr": {
+                    "occurrences": 1
+                },
+                "technolog": {
+                    "occurrences": 1
+                },
+                "june": {
+                    "occurrences": 2
+                },
+                "work": {
+                    "occurrences": 1
+                },
+                "group": {
+                    "occurrences": 3
+                },
+                "maintain": {
+                    "occurrences": 1
+                },
+                "class": {
+                    "occurrences": 1
+                },
+                "ut": {
+                    "occurrences": 3
+                },
+                "field": {
+                    "occurrences": 1
+                },
+                "evalu": {
+                    "occurrences": 1
+                },
+                "mentor": {
+                    "occurrences": 1
+                },
+                "issu": {
+                    "occurrences": 1
+                },
+                "jumpingoff": {
+                    "occurrences": 1
+                },
+                "point": {
+                    "occurrences": 1
+                },
+                "area": {
+                    "occurrences": 1
+                },
+                "suffer": {
+                    "occurrences": 1
+                },
+                "spurt": {
+                    "occurrences": 1
+                },
+                "construct": {
+                    "occurrences": 1
+                },
+                "frenzi": {
+                    "occurrences": 1
+                },
+                "organ": {
+                    "occurrences": 1
+                },
+                "belong": {
+                    "occurrences": 1
+                },
+                "sigcs": {
+                    "occurrences": 1
+                },
+                "acm": {
+                    "occurrences": 3
+                },
+                "special": {
+                    "occurrences": 2
+                },
+                "sigsoft": {
+                    "occurrences": 1
+                },
+                "softwar": {
+                    "occurrences": 1
+                },
+                "engin": {
+                    "occurrences": 2
+                },
+                "associ": {
+                    "occurrences": 1
+                },
+                "machineri": {
+                    "occurrences": 1
+                },
+                "ieee": {
+                    "occurrences": 1
+                },
+                "institut": {
+                    "occurrences": 1
+                },
+                "electr": {
+                    "occurrences": 1
+                },
+                "electron": {
+                    "occurrences": 1
+                },
+                "cpsr": {
+                    "occurrences": 1
+                },
+                "profession": {
+                    "occurrences": 1
+                },
+                "social": {
+                    "occurrences": 1
+                },
+                "respons": {
+                    "occurrences": 1
+                },
+                "connect": {
+                    "occurrences": 2
+                },
+                "web": {
+                    "occurrences": 1
+                },
+                "elsewher": {
+                    "occurrences": 1
+                },
+                "contact": {
+                    "occurrences": 1
+                },
+                "offic": {
+                    "occurrences": 2
+                },
+                "depart": {
+                    "occurrences": 1
+                },
+                "c": {
+                    "occurrences": 1
+                },
+                "tay": {
+                    "occurrences": 1
+                },
+                "tx": {
+                    "occurrences": 1
+                },
+                "usa": {
+                    "occurrences": 1
+                },
+                "cs": {
+                    "occurrences": 1
+                },
+                "main": {
+                    "occurrences": 1
+                },
+                "direct": {
+                    "occurrences": 1
+                },
+                "seldom": {
+                    "occurrences": 1
+                },
+                "fax": {
+                    "occurrences": 2
+                },
+                "alway": {
+                    "occurrences": 1
+                },
+                "need": {
+                    "occurrences": 1
+                },
+                "forewarn": {
+                    "occurrences": 1
+                },
+                "leav": {
+                    "occurrences": 1
+                },
+                "plenti": {
+                    "occurrences": 1
+                },
+                "time": {
+                    "occurrences": 1
+                },
+                "email": {
+                    "occurrences": 1
+                },
+                "address": {
+                    "occurrences": 1
+                },
+                "almstrumcsutexasedu": {
+                    "occurrences": 2
+                }
+            },
+            "category": "faculty"
+        },
         "http_^^www.cs.washington.edu^homes^dfasulo^": {
             "words": {
                 "date": {
@@ -2195,17 +2979,35 @@ def main():
                 }
             },
             "category": "student"
-        }    
+        }   
     }
     predictions=[]
-    k = 3
+
+    # Typically k = N^(1/2) where N is the number of attributes
+    # Attributes being each word found
+    k = 150
+
+    correctClassification = 0
+
+    # The number of pages processed
+    pageCount = 0
+
     for key in test_data:
-        print(key)
+        expected_classification = test_data[key]["category"]
         # Returns K number of nearest neighbors
         neighbors = msC.getNeighbors(test_data[key]['stemmed_words'], k)
         
         # Gets the classification of the the surrounding neighbors with the most members present
         classification = msC.getNeighborsVotes(neighbors)
+
+        if classification == expected_classification:
+            correctClassification += 1
+
+        pageCount += 1
+
+    print("Accuracy:  " + str(correctClassification / pageCount))
+
+        
 
 
 main()
