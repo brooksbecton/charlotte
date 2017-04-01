@@ -2,7 +2,6 @@ from CharlotteKnn import CharlotteKnn
 
 def main():
     msC = CharlotteKnn()
-    training_data = msC.createTrainingData()
 
     test_data = {"http_^^www.cs.cornell.edu^Info^People^lucy^lucy.html": {
         "words": {
@@ -746,8 +745,12 @@ def main():
     predictions=[]
     k = 3
     for key in test_data:
-        neighbors = msC.getNeighbors(training_data, test_data[key]['stemmed_words'], k)
-        print(str(neighbors))
+
+        # Returns K number of nearest neighbors
+        neighbors = msC.getNeighbors(test_data[key]['stemmed_words'], k)
+        
+        # Gets the classification of the the surrounding neighbors with the most members present
+        classification = msC.getNeighborsVotes(neighbors)
 
 
 main()
