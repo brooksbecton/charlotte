@@ -28,9 +28,7 @@ class CharlotteKnn(Charlotte):
         for word in instance1:
             if word in instance2:
                 distance += pow((instance1[word]['occurrences'] - instance2[word]['occurrences']), 2)
-                return math.sqrt(distance)
-            else:
-                return 0
+        return math.sqrt(distance)
 
     def createTrainingData(self):
         if os.path.exists('results/train.json') is not True:
@@ -59,11 +57,12 @@ class CharlotteKnn(Charlotte):
 
         # Sorting the files by distance
         distances.sort(key=operator.itemgetter(1))
-
+        
         neighbors = []
         for x in range(k):
             if(len(distances)):
                 neighbors.append(distances.pop())
+        print(neighbors)
         return neighbors    
                 
     # Takes in the nearest neighbors objects and checks their classification, 
