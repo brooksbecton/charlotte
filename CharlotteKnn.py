@@ -33,7 +33,6 @@ class CharlotteKnn(Charlotte):
     # Pre processes the html and creates JSON representations of the HTML file
     # Data type (string): either 'test' or 'train' depending on what type needs to be made
     def createData(self, dataType):
-        print(dataType)
         if os.path.exists('results/' + str(dataType) + '.json') is not True:
             file_data = {}
             target_dir = './assets/projectdata/' + str(dataType) + '/'
