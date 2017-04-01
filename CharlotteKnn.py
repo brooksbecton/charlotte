@@ -69,5 +69,17 @@ class CharlotteKnn(Charlotte):
     # Takes in the nearest neighbors objects and checks their classification, 
     # returning the classification with the highest number of present
     def getNeighborsVotes(self, neighbors):
+        votes = {}
         for neighbor in neighbors:
-            print(neighbor)
+            classification = self.training_data[neighbor[0]]['category']
+            if classification in votes:
+                votes[classification] += 1
+            else:
+                votes[classification] = 1
+        d = votes
+        s = [(k, d[k]) for k in sorted(d, key=d.get, reverse=True)]
+        for k, v in s: 
+            print(str(k) + ", " + str(v))
+
+
+        

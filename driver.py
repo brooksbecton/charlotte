@@ -3,749 +3,614 @@ from CharlotteKnn import CharlotteKnn
 def main():
     msC = CharlotteKnn()
 
-    test_data = {"http_^^www.cs.cornell.edu^Info^People^lucy^lucy.html": {
-        "words": {
-            "multimedia": {
-                "stemmed": "multimedia"
-            },
-            "university": {
-                "stemmed": "univers"
-            },
-            "security": {
-                "stemmed": "secur"
-            },
-            "connections": {
-                "stemmed": "connect"
-            },
-            "nov": {
-                "stemmed": "nov"
-            },
-            "archive": {
-                "stemmed": "archiv"
-            },
-            "java": {
-                "stemmed": "java"
-            },
-            "wus": {
-                "stemmed": "wus"
-            },
-            "taichi": {
-                "stemmed": "taichi"
-            },
-            "mail": {
-                "stemmed": "mail"
-            },
-            "interested": {
-                "stemmed": "interest"
-            },
-            "hot": {
-                "stemmed": "hot"
-            },
-            "cornell": {
-                "stemmed": "cornel"
-            },
-            "cnn": {
-                "stemmed": "cnn"
-            },
-            "engineering": {
-                "stemmed": "engin"
-            },
-            "reading": {
-                "stemmed": "read"
-            },
-            "web": {
-                "stemmed": "web"
-            },
-            "www": {
-                "stemmed": "www"
-            },
-            "company": {
-                "stemmed": "compani"
-            },
-            "internet": {
-                "stemmed": "internet"
-            },
-            "programming": {
-                "stemmed": "program"
-            },
-            "misc": {
-                "stemmed": "misc"
-            },
-            "novell": {
-                "stemmed": "novel"
-            },
-            "microsoft": {
-                "stemmed": "microsoft"
-            },
-            "object": {
-                "stemmed": "object"
-            },
-            "bay": {
-                "stemmed": "bay"
-            },
-            "computer": {
-                "stemmed": "comput"
-            },
-            "vrml": {
-                "stemmed": "vrml"
-            },
-            "database": {
-                "stemmed": "databas"
-            },
-            "networks": {
-                "stemmed": "network"
-            },
-            "classes": {
-                "stemmed": "class"
-            },
-            "gui": {
-                "stemmed": "gui"
-            },
-            "software": {
-                "stemmed": "softwar"
-            },
-            "server": {
-                "stemmed": "server"
-            },
-            "tune": {
-                "stemmed": "tune"
-            },
-            "whiz": {
-                "stemmed": "whiz"
-            },
-            "date": {
-                "stemmed": "date"
-            },
-            "stuff": {
-                "stemmed": "stuff"
-            },
-            "practicum": {
-                "stemmed": "practicum"
-            },
-            "hobbies": {
-                "stemmed": "hobbi"
-            },
-            "html": {
-                "stemmed": "html"
-            },
-            "practical": {
-                "stemmed": "practic"
-            },
-            "fall": {
-                "stemmed": "fall"
-            },
-            "wednesday": {
-                "stemmed": "wednesday"
-            },
-            "ithaca": {
-                "stemmed": "ithaca"
-            },
-            "icube": {
-                "stemmed": "icub"
-            },
-            "lucy": {
-                "stemmed": "luci"
-            },
-            "mtv": {
-                "stemmed": "mtv"
-            },
-            "chinachineserelated": {
-                "stemmed": "chinachineserel"
-            },
-            "management": {
-                "stemmed": "manag"
-            },
-            "page": {
-                "stemmed": "page"
-            },
-            "applications": {
-                "stemmed": "applic"
-            },
-            "pc": {
-                "stemmed": "pc"
-            },
-            "oriented": {
-                "stemmed": "orient"
-            },
-            "computing": {
-                "stemmed": "comput"
-            },
-            "businessweb": {
-                "stemmed": "businessweb"
-            },
-            "caltech": {
-                "stemmed": "caltech"
-            },
-            "search": {
-                "stemmed": "search"
-            },
-            "travelers": {
-                "stemmed": "travel"
-            },
-            "pingpong": {
-                "stemmed": "pingpong"
-            },
-            "yuwucscornelledu": {
-                "stemmed": "yuwucscornelledu"
-            },
-            "yulucy": {
-                "stemmed": "yuluci"
-            },
-            "netscape": {
-                "stemmed": "netscap"
-            },
-            "systems": {
-                "stemmed": "system"
-            },
-            "products": {
-                "stemmed": "product"
-            },
-            "project": {
-                "stemmed": "project"
-            },
-            "chinese": {
-                "stemmed": "chines"
-            },
-            "science": {
-                "stemmed": "scienc"
-            },
-            "cgi": {
-                "stemmed": "cgi"
-            },
-            "underground": {
-                "stemmed": "underground"
-            },
-            "sco": {
-                "stemmed": "sco"
-            },
-            "operating": {
-                "stemmed": "oper"
-            },
-            "contact": {
-                "stemmed": "contact"
-            },
-            "welcome": {
-                "stemmed": "welcom"
-            },
-            "corba": {
-                "stemmed": "corba"
-            },
-            "jobtrack": {
-                "stemmed": "jobtrack"
-            },
-            "travel": {
-                "stemmed": "travel"
-            },
-            "wu": {
-                "stemmed": "wu"
-            },
-            "ipatm": {
-                "stemmed": "ipatm"
-            },
-            "music": {
-                "stemmed": "music"
-            },
-            "etc": {
-                "stemmed": "etc"
-            },
-            "artvark": {
-                "stemmed": "artvark"
-            },
-            "badminton": {
-                "stemmed": "badminton"
-            },
-            "sites": {
-                "stemmed": "site"
-            },
-            "sunlab": {
-                "stemmed": "sunlab"
-            },
-            "cco": {
-                "stemmed": "cco"
-            },
-            "department": {
-                "stemmed": "depart"
-            },
-            "analysis": {
-                "stemmed": "analysi"
-            },
-            "sapient": {
-                "stemmed": "sapient"
-            },
-            "aug": {
-                "stemmed": "aug"
-            },
-            "toolsmeng": {
-                "stemmed": "toolsmeng"
-            },
-            "home": {
-                "stemmed": "home"
-            },
-            "irs": {
-                "stemmed": "ir"
-            },
-            "gallery": {
-                "stemmed": "galleri"
-            },
-            "language": {
-                "stemmed": "languag"
-            },
-            "news": {
-                "stemmed": "news"
-            },
-            "lube": {
-                "stemmed": "lube"
-            },
-            "omg": {
-                "stemmed": "omg"
-            },
-            "topics": {
-                "stemmed": "topic"
-            },
-            "meng": {
-                "stemmed": "meng"
-            },
-            "sunday": {
-                "stemmed": "sunday"
-            },
-            "nba": {
-                "stemmed": "nba"
-            },
-            "degree": {
-                "stemmed": "degre"
-            },
-            "tcltk": {
-                "stemmed": "tcltk"
-            },
-            "swimming": {
-                "stemmed": "swim"
-            },
-            "china": {
-                "stemmed": "china"
-            },
-            "cs": {
-                "stemmed": "cs"
-            },
-            "ny": {
-                "stemmed": "ny"
-            },
-            "spring": {
-                "stemmed": "spring"
-            },
-            "library": {
-                "stemmed": "librari"
-            },
-            "system": {
-                "stemmed": "system"
-            },
-            "resume": {
-                "stemmed": "resum"
-            },
-            "silvano": {
-                "stemmed": "silvano"
-            },
-            "sap": {
-                "stemmed": "sap"
-            },
-            "favorite": {
-                "stemmed": "favorit"
-            },
-            "student": {
-                "stemmed": "student"
-            },
-            "network": {
-                "stemmed": "network"
-            },
-            "personal": {
-                "stemmed": "person"
-            },
-            "ipng": {
-                "stemmed": "ipng"
-            },
-            "stock": {
-                "stemmed": "stock"
-            },
-            "sun": {
-                "stemmed": "sun"
-            },
-            "photograph": {
-                "stemmed": "photograph"
-            },
-            "distributed": {
-                "stemmed": "distribut"
-            },
-            "catalog": {
-                "stemmed": "catalog"
-            }
+    test_data = {
+        "http_^^cs.cornell.edu^Info^Courses^Current^CS415^CS414.html": {
+            "words": {
+                "server": {
+                    "stemmed": "server"
+                },
+                "date": {
+                    "stemmed": "date"
+                },
+                "sunday": {
+                    "stemmed": "sunday"
+                },
+                "dec": {
+                    "stemmed": "dec"
+                },
+                "tuesday": {
+                    "stemmed": "tuesday"
+                },
+                "nov": {
+                    "stemmed": "nov"
+                },
+                "cs": {
+                    "stemmed": "cs"
+                },
+                "home": {
+                    "stemmed": "home"
+                },
+                "page": {
+                    "stemmed": "page"
+                },
+                "systems": {
+                    "stemmed": "system"
+                },
+                "programming": {
+                    "stemmed": "program"
+                },
+                "operating": {
+                    "stemmed": "oper"
+                },
+                "practicum": {
+                    "stemmed": "practicum"
+                },
+                "system": {
+                    "stemmed": "system"
+                },
+                "kenneth": {
+                    "stemmed": "kenneth"
+                },
+                "p": {
+                    "stemmed": "p"
+                },
+                "birman": {
+                    "stemmed": "birman"
+                },
+                "news": {
+                    "stemmed": "news"
+                },
+                "group": {
+                    "stemmed": "group"
+                },
+                "course": {
+                    "stemmed": "cours"
+                },
+                "syllabus": {
+                    "stemmed": "syllabus"
+                },
+                "lecture": {
+                    "stemmed": "lectur"
+                },
+                "notes": {
+                    "stemmed": "note"
+                },
+                "unix": {
+                    "stemmed": "unix"
+                },
+                "filesystem": {
+                    "stemmed": "filesystem"
+                },
+                "structure": {
+                    "stemmed": "structur"
+                },
+                "linking": {
+                    "stemmed": "link"
+                },
+                "static": {
+                    "stemmed": "static"
+                },
+                "dynamic": {
+                    "stemmed": "dynam"
+                },
+                "assignments": {
+                    "stemmed": "assign"
+                },
+                "homework": {
+                    "stemmed": "homework"
+                },
+                "assignment": {
+                    "stemmed": "assign"
+                },
+                "solutions": {
+                    "stemmed": "solut"
+                },
+                "solution": {
+                    "stemmed": "solut"
+                },
+                "prelim": {
+                    "stemmed": "prelim"
+                },
+                "tas": {
+                    "stemmed": "tas"
+                },
+                "lili": {
+                    "stemmed": "lili"
+                },
+                "upson": {
+                    "stemmed": "upson"
+                },
+                "hall": {
+                    "stemmed": "hall"
+                },
+                "phone": {
+                    "stemmed": "phone"
+                },
+                "email": {
+                    "stemmed": "email"
+                },
+                "lilicscornelledu": {
+                    "stemmed": "lilicscornelledu"
+                },
+                "office": {
+                    "stemmed": "offic"
+                },
+                "hours": {
+                    "stemmed": "hour"
+                },
+                "wednesday": {
+                    "stemmed": "wednesday"
+                },
+                "friday": {
+                    "stemmed": "friday"
+                },
+                "yicheng": {
+                    "stemmed": "yicheng"
+                },
+                "huang": {
+                    "stemmed": "huang"
+                },
+                "ychuangcscornelledu": {
+                    "stemmed": "ychuangcscornelledu"
+                },
+                "thursday": {
+                    "stemmed": "thursday"
+                },
+                "mihai": {
+                    "stemmed": "mihai"
+                },
+                "budiu": {
+                    "stemmed": "budiu"
+                },
+                "budiucscornelledu": {
+                    "stemmed": "budiucscornelledu"
+                },
+                "last": {
+                    "stemmed": "last"
+                },
+                "modified": {
+                    "stemmed": "modifi"
+                },
+                "tue": {
+                    "stemmed": "tue"
+                }
+            },
+            "stemmed_words": {
+                "server": {
+                    "occurrences": 1
+                },
+                "date": {
+                    "occurrences": 1
+                },
+                "sunday": {
+                    "occurrences": 1
+                },
+                "dec": {
+                    "occurrences": 1
+                },
+                "tuesday": {
+                    "occurrences": 2
+                },
+                "nov": {
+                    "occurrences": 2
+                },
+                "cs": {
+                    "occurrences": 4
+                },
+                "home": {
+                    "occurrences": 1
+                },
+                "page": {
+                    "occurrences": 1
+                },
+                "system": {
+                    "occurrences": 3
+                },
+                "program": {
+                    "occurrences": 1
+                },
+                "oper": {
+                    "occurrences": 2
+                },
+                "practicum": {
+                    "occurrences": 1
+                },
+                "kenneth": {
+                    "occurrences": 1
+                },
+                "p": {
+                    "occurrences": 1
+                },
+                "birman": {
+                    "occurrences": 1
+                },
+                "news": {
+                    "occurrences": 1
+                },
+                "group": {
+                    "occurrences": 1
+                },
+                "cours": {
+                    "occurrences": 1
+                },
+                "syllabus": {
+                    "occurrences": 1
+                },
+                "lectur": {
+                    "occurrences": 1
+                },
+                "note": {
+                    "occurrences": 1
+                },
+                "unix": {
+                    "occurrences": 1
+                },
+                "filesystem": {
+                    "occurrences": 1
+                },
+                "structur": {
+                    "occurrences": 1
+                },
+                "link": {
+                    "occurrences": 1
+                },
+                "static": {
+                    "occurrences": 1
+                },
+                "dynam": {
+                    "occurrences": 1
+                },
+                "assign": {
+                    "occurrences": 2
+                },
+                "homework": {
+                    "occurrences": 5
+                },
+                "solut": {
+                    "occurrences": 6
+                },
+                "prelim": {
+                    "occurrences": 1
+                },
+                "tas": {
+                    "occurrences": 1
+                },
+                "lili": {
+                    "occurrences": 1
+                },
+                "upson": {
+                    "occurrences": 3
+                },
+                "hall": {
+                    "occurrences": 3
+                },
+                "phone": {
+                    "occurrences": 3
+                },
+                "email": {
+                    "occurrences": 3
+                },
+                "lilicscornelledu": {
+                    "occurrences": 1
+                },
+                "offic": {
+                    "occurrences": 3
+                },
+                "hour": {
+                    "occurrences": 3
+                },
+                "wednesday": {
+                    "occurrences": 2
+                },
+                "friday": {
+                    "occurrences": 1
+                },
+                "yicheng": {
+                    "occurrences": 1
+                },
+                "huang": {
+                    "occurrences": 1
+                },
+                "ychuangcscornelledu": {
+                    "occurrences": 1
+                },
+                "thursday": {
+                    "occurrences": 2
+                },
+                "mihai": {
+                    "occurrences": 1
+                },
+                "budiu": {
+                    "occurrences": 1
+                },
+                "budiucscornelledu": {
+                    "occurrences": 1
+                },
+                "last": {
+                    "occurrences": 1
+                },
+                "modifi": {
+                    "occurrences": 1
+                },
+                "tue": {
+                    "occurrences": 1
+                }
+            },
+            "category": "course"
         },
-        "stemmed_words": {
-            "multimedia": {
-                "occurrences": 1
-            },
-            "sap": {
-                "occurrences": 1
-            },
-            "nov": {
-                "occurrences": 1
-            },
-            "program": {
-                "occurrences": 1
-            },
-            "secur": {
-                "occurrences": 1
-            },
-            "java": {
-                "occurrences": 1
-            },
-            "wus": {
-                "occurrences": 1
-            },
-            "taichi": {
-                "occurrences": 1
-            },
-            "mail": {
-                "occurrences": 1
-            },
-            "hot": {
-                "occurrences": 1
-            },
-            "comput": {
-                "occurrences": 4
-            },
-            "cnn": {
-                "occurrences": 1
-            },
-            "welcom": {
-                "occurrences": 1
-            },
-            "ir": {
-                "occurrences": 1
-            },
-            "www": {
-                "occurrences": 1
-            },
-            "degre": {
-                "occurrences": 1
-            },
-            "chines": {
-                "occurrences": 1
-            },
-            "internet": {
-                "occurrences": 3
-            },
-            "sapient": {
-                "occurrences": 1
-            },
-            "misc": {
-                "occurrences": 1
-            },
-            "oper": {
-                "occurrences": 2
-            },
-            "microsoft": {
-                "occurrences": 1
-            },
-            "object": {
-                "occurrences": 1
-            },
-            "bay": {
-                "occurrences": 1
-            },
-            "vrml": {
-                "occurrences": 1
-            },
-            "cgi": {
-                "occurrences": 1
-            },
-            "gui": {
-                "occurrences": 1
-            },
-            "icub": {
-                "occurrences": 1
-            },
-            "depart": {
-                "occurrences": 1
-            },
-            "tune": {
-                "occurrences": 1
-            },
-            "whiz": {
-                "occurrences": 1
-            },
-            "date": {
-                "occurrences": 1
-            },
-            "stuff": {
-                "occurrences": 2
-            },
-            "scienc": {
-                "occurrences": 1
-            },
-            "silvano": {
-                "occurrences": 1
-            },
-            "practic": {
-                "occurrences": 1
-            },
-            "favorit": {
-                "occurrences": 1
-            },
-            "html": {
-                "occurrences": 1
-            },
-            "chinachineserel": {
-                "occurrences": 1
-            },
-            "fall": {
-                "occurrences": 1
-            },
-            "wednesday": {
-                "occurrences": 1
-            },
-            "ithaca": {
-                "occurrences": 1
-            },
-            "underground": {
-                "occurrences": 1
-            },
-            "page": {
-                "occurrences": 3
-            },
-            "businessweb": {
-                "occurrences": 1
-            },
-            "pc": {
-                "occurrences": 1
-            },
-            "cornel": {
-                "occurrences": 2
-            },
-            "caltech": {
-                "occurrences": 1
-            },
-            "search": {
-                "occurrences": 1
-            },
-            "pingpong": {
-                "occurrences": 1
-            },
-            "orient": {
-                "occurrences": 1
-            },
-            "yuwucscornelledu": {
-                "occurrences": 1
-            },
-            "hobbi": {
-                "occurrences": 1
-            },
-            "librari": {
-                "occurrences": 1
-            },
-            "read": {
-                "occurrences": 1
-            },
-            "distribut": {
-                "occurrences": 3
-            },
-            "swim": {
-                "occurrences": 1
-            },
-            "engin": {
-                "occurrences": 1
-            },
-            "languag": {
-                "occurrences": 3
-            },
-            "galleri": {
-                "occurrences": 1
-            },
-            "topic": {
-                "occurrences": 1
-            },
-            "databas": {
-                "occurrences": 3
-            },
-            "connect": {
-                "occurrences": 1
-            },
-            "sco": {
-                "occurrences": 1
-            },
-            "contact": {
-                "occurrences": 1
-            },
-            "corba": {
-                "occurrences": 1
-            },
-            "applic": {
-                "occurrences": 1
-            },
-            "travel": {
-                "occurrences": 2
-            },
-            "network": {
-                "occurrences": 4
-            },
-            "ipatm": {
-                "occurrences": 1
-            },
-            "music": {
-                "occurrences": 2
-            },
-            "etc": {
-                "occurrences": 1
-            },
-            "artvark": {
-                "occurrences": 1
-            },
-            "badminton": {
-                "occurrences": 1
-            },
-            "sunlab": {
-                "occurrences": 1
-            },
-            "ipng": {
-                "occurrences": 1
-            },
-            "cco": {
-                "occurrences": 1
-            },
-            "web": {
-                "occurrences": 2
-            },
-            "stock": {
-                "occurrences": 1
-            },
-            "manag": {
-                "occurrences": 2
-            },
-            "toolsmeng": {
-                "occurrences": 1
-            },
-            "home": {
-                "occurrences": 3
-            },
-            "news": {
-                "occurrences": 1
-            },
-            "site": {
-                "occurrences": 2
-            },
-            "product": {
-                "occurrences": 1
-            },
-            "interest": {
-                "occurrences": 1
-            },
-            "univers": {
-                "occurrences": 1
-            },
-            "meng": {
-                "occurrences": 1
-            },
-            "sunday": {
-                "occurrences": 1
-            },
-            "nba": {
-                "occurrences": 1
-            },
-            "compani": {
-                "occurrences": 1
-            },
-            "analysi": {
-                "occurrences": 1
-            },
-            "jobtrack": {
-                "occurrences": 1
-            },
-            "tcltk": {
-                "occurrences": 1
-            },
-            "mtv": {
-                "occurrences": 1
-            },
-            "china": {
-                "occurrences": 1
-            },
-            "project": {
-                "occurrences": 1
-            },
-            "archiv": {
-                "occurrences": 1
-            },
-            "novel": {
-                "occurrences": 1
-            },
-            "cs": {
-                "occurrences": 6
-            },
-            "ny": {
-                "occurrences": 1
-            },
-            "server": {
-                "occurrences": 2
-            },
-            "spring": {
-                "occurrences": 2
-            },
-            "softwar": {
-                "occurrences": 2
-            },
-            "system": {
-                "occurrences": 7
-            },
-            "practicum": {
-                "occurrences": 1
-            },
-            "resum": {
-                "occurrences": 1
-            },
-            "lube": {
-                "occurrences": 1
-            },
-            "student": {
-                "occurrences": 1
-            },
-            "luci": {
-                "occurrences": 1
-            },
-            "wu": {
-                "occurrences": 1
-            },
-            "aug": {
-                "occurrences": 1
-            },
-            "yuluci": {
-                "occurrences": 1
-            },
-            "sun": {
-                "occurrences": 2
-            },
-            "omg": {
-                "occurrences": 1
-            },
-            "person": {
-                "occurrences": 1
-            },
-            "photograph": {
-                "occurrences": 1
-            },
-            "class": {
-                "occurrences": 2
-            },
-            "netscap": {
-                "occurrences": 1
-            },
-            "catalog": {
-                "occurrences": 1
-            }
-        },
-        "category": "student"
-    }}
+        "http_^^www.cs.utexas.edu^users^almstrum^classes^cs336^fall96^": {
+            "words": {
+                "server": {
+                    "stemmed": "server"
+                },
+                "date": {
+                    "stemmed": "date"
+                },
+                "monday": {
+                    "stemmed": "monday"
+                },
+                "jan": {
+                    "stemmed": "jan"
+                },
+                "sep": {
+                    "stemmed": "sep"
+                },
+                "cs": {
+                    "stemmed": "cs"
+                },
+                "analysis": {
+                    "stemmed": "analysi"
+                },
+                "programs": {
+                    "stemmed": "program"
+                },
+                "fall": {
+                    "stemmed": "fall"
+                },
+                "instructor": {
+                    "stemmed": "instructor"
+                },
+                "vicki": {
+                    "stemmed": "vicki"
+                },
+                "l": {
+                    "stemmed": "l"
+                },
+                "almstrum": {
+                    "stemmed": "almstrum"
+                },
+                "ta": {
+                    "stemmed": "ta"
+                },
+                "linyuan": {
+                    "stemmed": "linyuan"
+                },
+                "yang": {
+                    "stemmed": "yang"
+                },
+                "syllabus": {
+                    "stemmed": "syllabus"
+                },
+                "announcements": {
+                    "stemmed": "announc"
+                },
+                "homework": {
+                    "stemmed": "homework"
+                },
+                "assignments": {
+                    "stemmed": "assign"
+                },
+                "handouts": {
+                    "stemmed": "handout"
+                },
+                "interesting": {
+                    "stemmed": "interest"
+                },
+                "tutorials": {
+                    "stemmed": "tutori"
+                },
+                "news": {
+                    "stemmed": "news"
+                },
+                "utexasclasscsa": {
+                    "stemmed": "utexasclasscsa"
+                },
+                "almstrums": {
+                    "stemmed": "almstrum"
+                },
+                "homepage": {
+                    "stemmed": "homepag"
+                },
+                "last": {
+                    "stemmed": "last"
+                },
+                "updated": {
+                    "stemmed": "updat"
+                },
+                "page": {
+                    "stemmed": "page"
+                },
+                "prepared": {
+                    "stemmed": "prepar"
+                },
+                "suggestions": {
+                    "stemmed": "suggest"
+                },
+                "comments": {
+                    "stemmed": "comment"
+                },
+                "welcome": {
+                    "stemmed": "welcom"
+                },
+                "click": {
+                    "stemmed": "click"
+                },
+                "send": {
+                    "stemmed": "send"
+                },
+                "email": {
+                    "stemmed": "email"
+                },
+                "almstrumcsutexasedu": {
+                    "stemmed": "almstrumcsutexasedu"
+                },
+                "linyuancsutexasedu": {
+                    "stemmed": "linyuancsutexasedu"
+                },
+                "department": {
+                    "stemmed": "depart"
+                },
+                "computer": {
+                    "stemmed": "comput"
+                },
+                "sciences": {
+                    "stemmed": "scienc"
+                },
+                "ut": {
+                    "stemmed": "ut"
+                },
+                "austin": {
+                    "stemmed": "austin"
+                }
+            },
+            "stemmed_words": {
+                "server": {
+                    "occurrences": 1
+                },
+                "date": {
+                    "occurrences": 1
+                },
+                "monday": {
+                    "occurrences": 2
+                },
+                "jan": {
+                    "occurrences": 1
+                },
+                "sep": {
+                    "occurrences": 1
+                },
+                "cs": {
+                    "occurrences": 2
+                },
+                "analysi": {
+                    "occurrences": 2
+                },
+                "program": {
+                    "occurrences": 2
+                },
+                "fall": {
+                    "occurrences": 1
+                },
+                "instructor": {
+                    "occurrences": 2
+                },
+                "vicki": {
+                    "occurrences": 2
+                },
+                "l": {
+                    "occurrences": 2
+                },
+                "almstrum": {
+                    "occurrences": 3
+                },
+                "ta": {
+                    "occurrences": 1
+                },
+                "linyuan": {
+                    "occurrences": 1
+                },
+                "yang": {
+                    "occurrences": 1
+                },
+                "syllabus": {
+                    "occurrences": 1
+                },
+                "announc": {
+                    "occurrences": 1
+                },
+                "homework": {
+                    "occurrences": 1
+                },
+                "assign": {
+                    "occurrences": 1
+                },
+                "handout": {
+                    "occurrences": 1
+                },
+                "interest": {
+                    "occurrences": 1
+                },
+                "tutori": {
+                    "occurrences": 1
+                },
+                "news": {
+                    "occurrences": 1
+                },
+                "utexasclasscsa": {
+                    "occurrences": 1
+                },
+                "homepag": {
+                    "occurrences": 1
+                },
+                "last": {
+                    "occurrences": 1
+                },
+                "updat": {
+                    "occurrences": 1
+                },
+                "page": {
+                    "occurrences": 1
+                },
+                "prepar": {
+                    "occurrences": 1
+                },
+                "suggest": {
+                    "occurrences": 1
+                },
+                "comment": {
+                    "occurrences": 1
+                },
+                "welcom": {
+                    "occurrences": 1
+                },
+                "click": {
+                    "occurrences": 1
+                },
+                "send": {
+                    "occurrences": 1
+                },
+                "email": {
+                    "occurrences": 1
+                },
+                "almstrumcsutexasedu": {
+                    "occurrences": 1
+                },
+                "linyuancsutexasedu": {
+                    "occurrences": 1
+                },
+                "depart": {
+                    "occurrences": 1
+                },
+                "comput": {
+                    "occurrences": 1
+                },
+                "scienc": {
+                    "occurrences": 1
+                },
+                "ut": {
+                    "occurrences": 1
+                },
+                "austin": {
+                    "occurrences": 1
+                }
+            },
+            "category": "course"
+    },       
+    }
     predictions=[]
     k = 3
     for key in test_data:
-
+        print(key)
         # Returns K number of nearest neighbors
         neighbors = msC.getNeighbors(test_data[key]['stemmed_words'], k)
         
