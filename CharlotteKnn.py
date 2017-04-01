@@ -20,8 +20,8 @@ class CharlotteKnn(Charlotte):
     training_data = {}
 
     def __init__(self):
-        self.training_data = self.createTrainingData()
-
+        self.training_data = self.createData("train")
+        self.createData("test")
     def euclideanDistance(self, instance1, instance2):
         distance = 0
 
@@ -30,16 +30,21 @@ class CharlotteKnn(Charlotte):
                 distance += pow((instance1[word]['occurrences'] - instance2[word]['occurrences']), 2)
         return math.sqrt(distance)
 
-    def createTrainingData(self):
-        if os.path.exists('results/train.json') is not True:
+    # Pre processes the html and creates JSON representations of the HTML file
+    # Data type (string): either 'test' or 'train' depending on what type needs to be made
+    def createData(self, dataType):
+        print(dataType)
+        if os.path.exists('results/' + str(dataType) + '.json') is not True:
             file_data = {}
-            target_dir = './assets/projectdata/train/'
+            target_dir = './assets/projectdata/' + str(dataType) + '/'
             for root, dirs, files in os.walk(target_dir, topdown=False):
                 for d in dirs:
                     for f in os.listdir(root + d):
                         file_data[f] = self.process_html_file(root + d + '/' + f)
                         file_data[f]['category'] = d
-                with open('results/train.json', 'w+') as outfile:
+                if os.path.isdir("results") is not True:
+                    os.makedirs('results')
+                with open('results/' + str(dataType) + '.json', 'w+') as outfile:
                     outfile.write(json.dumps(file_data, indent=4) )
             return file_data
         else: 
