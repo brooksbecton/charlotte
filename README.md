@@ -2,17 +2,17 @@
 
 This is a web scraper built for CSCI490: Data Mining. It's purpose is to take in course, faculty, and student web pages and try to decide which pages belong to which group.
 
-##Setup
+## Setup
 1. Install virtualenv
 2. run 'virtualenv env'
 3. Enter Virtual Environment
-  * nix - source env\Scripts\activate
-  * winders - env\Scripts\activate
+* nix - source env\Scripts\activate
+* winders - env\Scripts\activate
 4. Install dependencies
-  * 'pip install -r requirements.txt'
+* 'pip install -r requirements.txt'
 5. Install NLTK Stop Words
-  * 'python'
-  * 'import nltk'
-  * 'nltk.download()'
-  * Go to 'All Packages'
-  * Download 'stopwords'
+* 'python'
+* 'import nltk'
+* 'nltk.download()'
+* Go to 'All Packages'
+* Download 'stopwords'
