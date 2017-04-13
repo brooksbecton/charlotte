@@ -20,8 +20,11 @@ class CharlotteKnn(Charlotte):
     training_data = {}
 
     def __init__(self):
+        super().__init__()
         self.training_data = self.createData("train")
         self.createData("test")
+
+
     def euclideanDistance(self, instance1, instance2):
         distance = 0
 
@@ -47,10 +50,9 @@ class CharlotteKnn(Charlotte):
                     outfile.write(json.dumps(file_data, indent=4) )
             return file_data
         else: 
-            with open('results/train.json', 'r') as file_data:
+            with open('results/' + str(dataType) + '.json', 'r') as file_data:
                 return json.loads(file_data.read())
 
-    # trainingSet: contains all stop words and categories from the training files
     # testInstance: one file object that has stop words but not category
     # k: the number of neighbors needed to categorize the testInstance
     def getNeighbors(self, testInstance, k):

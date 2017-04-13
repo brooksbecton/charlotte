@@ -15,7 +15,6 @@ class Charlotte:
 
     def __init__(self):
         self.stop_words = self.gen_stop_words() 
-
     def concat_files(self, filenames, output_file):
         with open(output_file, 'w') as outfile:
             for fname in filenames:
@@ -34,6 +33,15 @@ class Charlotte:
         stop_words.add("lastmodified")
         stop_words.add("texthtml")
         stop_words.add("cern")
+        stop_words.add("monday")
+        stop_words.add("tuesday")
+        stop_words.add("wednesday")
+        stop_words.add("thursday")
+        stop_words.add("friday")
+        stop_words.add("saturday")
+        stop_words.add("sunday")
+        stop_words.add("nov")
+        stop_words.add("dec")
         return stop_words
 
     def get_all_filenames_from_dir(self):
@@ -79,7 +87,20 @@ class Charlotte:
     def process_html_files(self, filenames):
         for filename in filenames:
             file_word_data = self.process_html_file(filename)
-            self.word_data[filename] = file_word_data
+            self.word_data[filename] = self.remove_noisey_words(file_word_data, 5)
+
+    def remove_noisy_words(self, word_data, wordCountThreshhold):
+        for filename in word_data:
+            wordsToDel = []
+            words = word_data[filename]["stemmed_words"]
+            for word in words:
+                occurrences = words[word]["occurrences"]
+                if occurrences < wordCountThreshhold:
+                    wordsToDel.append(word)
+            for word in wordsToDel:
+                del words[word]
+
+        return word_data
 
     def remove_html_tags(self, html):
         #Removes all html tags and concats all strings
@@ -99,7 +120,6 @@ class Charlotte:
 
     def remove_stop_words(self, unfiltered_words):
         filtered_words = []
-
         for word in unfiltered_words:
             word  = ''.join(e for e in word if e.isalpha())
             if word not in self.stop_words:
